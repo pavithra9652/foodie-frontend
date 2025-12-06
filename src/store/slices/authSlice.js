@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios'
 
 // Use proxy in development, direct URL in production
-const API_URL = import.meta.env.DEV ? '/api' : import.meta.env.VITE_API_URL || '/api'
+const API_URL =https://foodie-backend-83lv.onrender.com
 
 // Create axios instance with interceptors
 const api = axios.create({
