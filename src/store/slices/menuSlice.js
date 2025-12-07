@@ -9,12 +9,15 @@ export const fetchMenuItems = createAsyncThunk(
   async (category = null, { rejectWithValue }) => {
     try {
       const url = category 
-        ? `${API_URL}/menu?category=${category}`
-        : `${API_URL}/menu`
+        ? `${API_URL}/api/menu?category=${category}`
+        : `${API_URL}/api/menu`
+
       const response = await axios.get(url)
       return response.data
     } catch (error) {
-      return rejectWithValue(error.response?.data?.message || 'Failed to fetch menu')
+      return rejectWithValue(
+        error.response?.data?.message || 'Failed to fetch menu'
+      )
     }
   }
 )
