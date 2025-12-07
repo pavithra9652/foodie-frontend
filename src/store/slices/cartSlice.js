@@ -1,8 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios'
-
+import { API_URL } from '../../config.js'  
 // Use proxy in development, direct URL in production
-const API_URL = import.meta.env.DEV ? '/api' : import.meta.env.VITE_API_URL || '/api'
 
 // Helper to get auth headers
 const getAuthHeaders = (getState) => {
